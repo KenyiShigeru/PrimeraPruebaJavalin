@@ -4,6 +4,7 @@ import com.models.*;
 public class App {
     public App(Javalin app)
     {
-        app.get("/", clientes::obtenerClientes);
+        new Clientes(app);
     }
 }
+    
