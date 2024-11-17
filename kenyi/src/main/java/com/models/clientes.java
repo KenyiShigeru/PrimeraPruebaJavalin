@@ -23,10 +23,7 @@ public class Clientes {
         catch(Exception ex)
         {
             ctx.result(ex.getMessage());
+            //Los context tienen dos tipos de resultados un texto y un json
         }
-        /* ctx.result("Aqui va un mensaje");
-        tipos de salidas que puede dar una funcion que opera con context
-        todas las rutas deben llevar como segundo parametro un context
-        */
     };
 }
