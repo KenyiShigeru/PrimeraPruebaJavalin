@@ -30,7 +30,7 @@ public class Clientes {
     private Handler insertarCliente = ctx ->
     {
         try{
-            consulta = "'CALL agg_cliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'";
+            consulta = "CALL agg_cliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             List<Map<String,Object>> resultado = DatabaseConnection.listForQuery(consulta);
             DatabaseConnection.CerrarConsulta();
             ctx.result("Agregado correctamente");
