@@ -26,4 +26,20 @@ public class Clientes {
             //Los context tienen dos tipos de resultados un texto y un json
         }
     };
+
+    private Handler insertarCliente = ctx ->
+    {
+        try{
+            consulta = "'CALL agg_cliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'";
+            List<Map<String,Object>> resultado = DatabaseConnection.listForQuery(consulta);
+            DatabaseConnection.CerrarConsulta();
+            ctx.result("Agregado correctamente");
+        }
+        catch(Exception ex)
+        {
+            ctx.result(ex.getMessage());
+            //Los context tienen dos tipos de resultados un texto y un json
+        }
+    };
+
 }
