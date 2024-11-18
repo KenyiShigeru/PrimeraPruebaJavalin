@@ -10,6 +10,7 @@ public class Clientes {
     public Clientes(Javalin app)
     {
         app.get("/clientes", obtenerClientes);
+        app.post("/clientes", insertarCliente);
     }
 
     private Handler obtenerClientes = ctx ->
